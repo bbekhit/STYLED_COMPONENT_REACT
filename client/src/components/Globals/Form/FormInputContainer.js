@@ -1,15 +1,12 @@
 import styled, { css } from "styled-components";
-import { setColor, setTransition } from "../../../styles/helpers";
+import { setColor, setTransition, setRem } from "../../../styles/helpers";
 
 const subColor = "grey";
 const mainColor = "black";
 
 const shrinkLabelStyles = css`
-  /* top: -14px;
-  font-size: 12px;
-  color: ${mainColor}; */
   top: -7px;
-  font-size: 12px;
+  font-size: 10px;
   color: ${setColor.theme};
   background: white;
   padding: 1px 5px;
@@ -28,7 +25,7 @@ export const FormInputContainer = styled.input`
   background: none;
   background-color: white;
   color: ${setColor.mainColor};
-  font-size: setRem(18);
+  font-size: ${setRem(18)};
   padding: 10px 10px 10px 5px;
   display: block;
   width:  ${(props) => (props.size ? props.size : "100%")};
@@ -49,12 +46,12 @@ export const FormInputContainer = styled.input`
 
 export const FormInputLabel = styled.label`
   color: ${setColor.mainColor};
-  font-size: setRem(16);
+  font-size: ${setRem(14)};
   font-weight: normal;
   position: absolute;
   pointer-events: none;
   left: 5px;
-  top: 8px;
+  top: 13px;
   ${setTransition()};
   &.shrink {
     ${shrinkLabelStyles}
@@ -63,6 +60,7 @@ export const FormInputLabel = styled.label`
 
 export const FormContainer = styled.div`
   width: ${(props) => (props.size ? props.size : "400px")};
+  min-width: 100px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;

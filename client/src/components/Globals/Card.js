@@ -68,9 +68,7 @@ export default styled(Card)`
   overflow: hidden;
   ${setShadow.light};
   border-radius: 15px;
-  width: 300px;
-  min-width: 250px;
-  max-width: 300px;
+
   ${setTransition({ time: ".5s" })};
   .card-image {
     ${(props) => setBackground(props.img, "rgba(0,0,0,0)")};
@@ -219,4 +217,10 @@ export default styled(Card)`
   ${media.phone` 
     width: 80%;
     `}
+`;
+
+const test = styled.div`
+  width: 300px;
+  min-width: 250px;
+  max-width: 300px;
 `;

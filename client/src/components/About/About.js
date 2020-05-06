@@ -19,6 +19,7 @@ import ToggleButton from "../Globals/ToggleButton";
 import RadioButton from "../Globals/RadioButton";
 import CheckButton from "../Globals/CheckButton";
 import Typer from "../Globals/Typer";
+import { Container, RowGrid, Column, Test } from "../Globals/Grid/Grid";
 
 const About = ({ className }) => {
   const [email, setEmail] = useState("");
@@ -276,6 +277,92 @@ const About = ({ className }) => {
           </Item>
         </Row>
       </Section>
+      <Container>
+        <RowGrid>
+          <Column sm="6" lg="4">
+            <Card fadeIn />
+          </Column>
+          <Column sm="6" lg="4">
+            <Card fadeIn />
+          </Column>
+          <Column sm="6" lg="4">
+            <Card fadeIn />
+          </Column>
+          <Column sm="6" lg="4">
+            <Card fadeIn />
+          </Column>
+        </RowGrid>
+        <RowGrid>
+          <Column sm="3" lg="2">
+            <Form size={"100%"}>
+              <GroupContainer>
+                <FormInput value={email} onChange={onChange} />
+              </GroupContainer>
+              <TwoInputContainer>
+                <GroupContainer size="49%">
+                  <FormInput label="Email" value={email} onChange={onChange} />
+                </GroupContainer>
+                <GroupContainer size="49%">
+                  <FormInput label="Email" value={email} onChange={onChange} />
+                </GroupContainer>
+              </TwoInputContainer>
+            </Form>
+          </Column>
+          <Column sm="3" lg="2">
+            <img src={aboutImg} alt="about us" style={{ width: "100%" }} />
+          </Column>
+          <Column sm="3" lg="2">
+            <img src={aboutImg} alt="about us" style={{ width: "100%" }} />
+          </Column>
+          <Column sm="3" lg="2" collapse="sm">
+            <Form size={"100%"}>
+              <GroupContainer>
+                <FormInput value={email} onChange={onChange} />
+              </GroupContainer>
+              <TwoInputContainer>
+                <GroupContainer size="49%">
+                  <FormInput label="Email" value={email} onChange={onChange} />
+                </GroupContainer>
+                <GroupContainer size="49%">
+                  <FormInput label="Email" value={email} onChange={onChange} />
+                </GroupContainer>
+              </TwoInputContainer>
+            </Form>
+          </Column>
+          <Column sm="3" lg="2">
+            <img src={aboutImg} alt="about us" style={{ width: "100%" }} />
+          </Column>
+          <Column sm="3" lg="2">
+            <img src={aboutImg} alt="about us" style={{ width: "100%" }} />
+          </Column>
+          <Column sm="3" lg="2">
+            <img src={aboutImg} alt="about us" style={{ width: "100%" }} />
+          </Column>
+          <Column sm="3" lg="2">
+            <img src={aboutImg} alt="about us" style={{ width: "100%" }} />
+          </Column>
+        </RowGrid>
+        <RowGrid>
+          <Column sm="6">
+            <img src={aboutImg} alt="about us" style={{ width: "100%" }} />
+          </Column>
+          <Column sm="6">
+            <Form size={"100%"}>
+              <GroupContainer>
+                <FormInput value={email} onChange={onChange} />
+              </GroupContainer>
+              <TwoInputContainer>
+                <GroupContainer size="49%">
+                  <FormInput label="Email" value={email} onChange={onChange} />
+                </GroupContainer>
+                <GroupContainer size="49%">
+                  <FormInput label="Email" value={email} onChange={onChange} />
+                </GroupContainer>
+              </TwoInputContainer>
+            </Form>
+          </Column>
+        </RowGrid>
+      </Container>
     </div>
   );
 };
